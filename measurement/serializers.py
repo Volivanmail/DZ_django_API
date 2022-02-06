@@ -13,7 +13,7 @@ class MeasurementSerializer(serializers.ModelSerializer):
 class SensorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sensor
-        fields = ['id', 'name', 'description', 'date_create', 'date_update', 'measurements']
+        fields = ['id', 'name', 'description']
 
 
 class SensorDetailSerializer(serializers.ModelSerializer):
@@ -21,4 +21,5 @@ class SensorDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Sensor
-        fields = ['id', 'name', 'description']
+        fields = ['id', 'name', 'description', 'date_create', 'date_update', 'measurements']
+
