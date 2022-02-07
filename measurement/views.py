@@ -9,7 +9,7 @@ from measurement.serializers import SensorDetailSerializer, MeasurementSerialize
 
 
 class SensorView(generics.ListCreateAPIView):
-    queryset = Sensor.objects.all().prefetch_related('measurements')
+    queryset = Sensor.objects.all()
     serializer_class = SensorSerializer
 
 
